@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - LearnEasy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>LearnEasy</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="courses.html">Courses</a>
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Our Courses</h2>
+        <table border="2">
+            <tr>
+                <th>Course Name</th>
+                <th>Description</th>
+                <th>Resources</th>
+                <th>Feedback</th>
+            </tr>
+            <tr>
+                <td bgcolor="blue">HTML Basics</td>
+                <td bgcolor="blue">Learn the structure of web pages</td>
+                <td>
+                    <ol class="resource-list">
+                        <li><a href="https://www.youtube.com/watch?v=UB1O30fR-EE" target="_blank">HTML Tutorial (Video)</a></li>
+                        <li><a href="https://www.w3schools.com/html/" target="_blank">W3Schools HTML Guide</a></li>
+                    </ol>
+                </td>
+                <td><button class="feedback-btn" data-course="HTML">Give Feedback</button></td>
+            </tr>
+            <tr>
+                <td bgcolor="blue">CSS Basics</td>
+                <td bgcolor="blue">Style your web pages</td>
+                <td>
+                    <ol class="resource-list">
+                        <li><a href="https://www.youtube.com/watch?v=yfoY53QXEnI" target="_blank">CSS Tutorial (Video)</a></li>
+                        <li><a href="https://www.w3schools.com/css/" target="_blank">W3Schools CSS Guide</a></li>
+                    </ol>
+                </td>
+                <td><button class="feedback-btn" data-course="CSS">Give Feedback</button></td>
+            </tr>
+            <tr>
+                <td bgcolor="blue">JavaScript Basics</td>
+                <td bgcolor="blue">Add interactivity to your site</td>
+                <td>
+                    <ol class="resource-list">
+                        <li><a href="https://www.youtube.com/watch?v=W6NZfCO5SIk" target="_blank">JS Tutorial (Video)</a></li>
+                        <li><a href="https://www.w3schools.com/js/" target="_blank">W3Schools JS Guide</a></li>
+                    </ol>
+                </td>
+                <td><button class="feedback-btn" data-course="JavaScript">Give Feedback</button></td>
+            </tr>
+            <tr>
+                <td bgcolor="blue">PHP Basics</td>
+                <td bgcolor="blue">Learn server-side scripting with PHP</td>
+                <td>
+                    <ol class="resource-list">
+                        <li><a href="https://www.youtube.com/watch?v=OK_JCtrrv-c" target="_blank">PHP Tutorial (Video)</a></li>
+                        <li><a href="https://www.w3schools.com/php/" target="_blank">W3Schools PHP Guide</a></li>
+                    </ol>
+                </td>
+                <td><button class="feedback-btn" data-course="PHP">Give Feedback</button></td>
+            </tr>
+            <tr>
+                <td bgcolor="blue">React JS Basics</td>
+                <td bgcolor="blue">Build dynamic user interfaces with React</td>
+                <td>
+                    <ol class="resource-list">
+                        <li><a href="https://www.youtube.com/watch?v=bMknfKXIFA8" target="_blank">React Tutorial (Video)</a></li>
+                        <li><a href="https://reactjs.org/tutorial/tutorial.html" target="_blank">React Official Tutorial</a></li>
+                    </ol>
+                </td>
+                <td><button class="feedback-btn" data-course="React JS">Give Feedback</button></td>
+            </tr>
+            <tr>
+                <td bgcolor="blue">Angular JS Basics</td>
+                <td bgcolor="blue">Develop robust applications with Angular</td>
+                <td>
+                    <ol class="resource-list">
+                        <li><a href="https://www.youtube.com/watch?v=2OHbjep_WjQ" target="_blank">Angular Tutorial (Video)</a></li>
+                        <li><a href="https://angular.io/guide/setup-local" target="_blank">Angular Official Guide</a></li>
+                    </ol>
+                </td>
+                <td><button class="feedback-btn" data-course="Angular JS">Give Feedback</button></td>
+            </tr>
+        </table>
+
+        <!-- Feedback Form (Hidden by Default) -->
+        <div id="feedbackFormContainer" class="feedback-container" style="display: none;">
+            <h3>Feedback for <span id="courseName"></span></h3>
+            <form id="feedbackForm">
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="rating">Rating (1-5):</label>
+                    <select id="rating" name="rating" required>
+                        <option value="">Select</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="comments">Comments:</label>
+                    <textarea id="comments" name="comments" rows="3" required></textarea>
+                </div>
+                <button type="submit">Submit</button>
+                <button type="button" id="closeFeedback">Close</button>
+            </form>
+            <p id="feedbackMessage"></p>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
